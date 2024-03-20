@@ -1,7 +1,6 @@
 'use client';
 import { FilterType } from '@/types/filter-types';
 import { PriorityTypes } from '@/types/priority-types';
-import { setPriority } from 'os';
 import { createContext, ReactNode, useState } from 'react';
 
 export const FilterContext = createContext({
