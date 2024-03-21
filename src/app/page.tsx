@@ -1,8 +1,7 @@
 'use client';
-
 import styles from './page.module.css';
-import { FilterBar } from '@/components/filter-bar';
-import { ProductsList } from '@/components/products-list';
+import { FilterBar } from '@/components/filter-bar/filter-bar';
+import { ProductsList } from '@/components/products-list/products-list';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export default function Home() {

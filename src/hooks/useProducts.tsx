@@ -1,31 +1,34 @@
 import { ProductsFetchResponse } from '@/types/products-response';
 import { useQuery } from '@tanstack/react-query';
 import axios, { AxiosPromise } from 'axios';
+import { useFilter } from './useFilter';
+import { mountQuery } from '@/utils/graphql-filters';
+import { useDeferredValue } from 'react';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
-const fetcher = (): AxiosPromise<ProductsFetchResponse> => {
+const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> => {
   return axios.post(API_URL, {
-    query: `
-      query {
-        allProducts {
-          id
-          name
-          price_in_cents
-          image_url
-        }
-      } 
-    `
+    query
   });
 };
 
 export function useProducts() {
+  const { type, priority, search } = useFilter();
+  const searchDeffered = useDeferredValue(search);
+  const query = mountQuery(type, priority);
   const { data } = useQuery({
-    queryKey: ['products'],
-    queryFn: fetcher
+    queryKey: ['products', type, priority],
+    queryFn: () => fetcher(query)
   });
+  const products = data?.data?.data?.allProducts;
+  const filteredProducts = products?.filter((product) =>
+    product.name
+      .toLocaleLowerCase()
+      .includes(searchDeffered.toLocaleLowerCase())
+  );
 
   return {
-    data: data?.data?.data?.allProducts
+    data: filteredProducts
   };
 }

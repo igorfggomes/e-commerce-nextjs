@@ -1,13 +1,6 @@
-import { formatPrice } from '@/utils/format-price';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-interface ProductCardProps {
-  image: string;
-  title: string;
-  price: number;
-}
-
-const Card = styled.div`
+export const Card = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,18 +48,3 @@ const Card = styled.div`
     }
   }
 `;
-
-export function ProductCard(props: ProductCardProps) {
-  const price = formatPrice(props.price);
-
-  return (
-    <Card>
-      <img src={props.image} />
-      <div>
-        <h3>{props.title}</h3>
-        <div></div>
-        <p>{price}</p>
-      </div>
-    </Card>
-  );
-}
