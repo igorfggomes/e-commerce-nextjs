@@ -18,8 +18,9 @@ export function useProducts() {
   const searchDeffered = useDeferredValue(search);
   const query = mountQuery(type, priority);
   const { data } = useQuery({
+    queryFn: () => fetcher(query),
     queryKey: ['products', type, priority],
-    queryFn: () => fetcher(query)
+    staleTime: 1000 * 60 * 1
   });
   const products = data?.data?.data?.allProducts;
   const filteredProducts = products?.filter((product) =>
