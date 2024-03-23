@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface FilterItemProps {
   selected: boolean;
@@ -15,8 +15,8 @@ export const FilterList = styled.ul`
 export const FilterItem = styled.li<FilterItemProps>`
   font-family: inherit;
   font-weight: ${(props) => (props.selected ? '600' : '400')};
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
@@ -25,4 +25,9 @@ export const FilterItem = styled.li<FilterItemProps>`
 
   border-bottom: ${(props) =>
     props.selected ? '4px solid var(--orange-low)' : ''};
+
+  @media (min-width: ${(props) => props.theme.desktopBreakpoint}) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `;
