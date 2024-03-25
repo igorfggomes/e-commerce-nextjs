@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <TagHeader>
-      <Logo className={sairaStencil.className}>Capputeeno</Logo>
+      <Logo className={sairaStencil.className} href="/">Capputeeno</Logo>
       <div>
         <PrimaryInputWSearchIcon
           placeholder="Procurando por algo específico?"

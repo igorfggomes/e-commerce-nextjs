@@ -23,6 +23,7 @@ export const Logo = styled.a`
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
+  text-decoration: none;
 
   @media (min-width: ${(props) => props.theme.tabletBreakpoint}) {
     font-size: 24px;
