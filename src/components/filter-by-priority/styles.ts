@@ -28,7 +28,7 @@ export const FilterContainer = styled.div`
 export const PriorityFilter = styled.ul`
   position: absolute;
   width: 250px;
-  background: #ffffff;
+  background: var(--white-color);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 12px 16px;

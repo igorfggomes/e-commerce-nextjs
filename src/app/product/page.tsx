@@ -1,6 +1,6 @@
 'use client';
 import { ShoppingBagIcon } from '@/assets/icons/shopping-bag-icon';
-import { BackBtn } from '@/components/back-button/back-button';
+import { BackButton } from '@/components/back-button/back-button';
 import { DefaultPageLayout } from '@/components/default-page-layout/default-page-layout';
 import { useProduct } from '@/hooks/useProduct';
 import { formatPrice } from '@/utils/format-price';
@@ -44,7 +44,7 @@ export default function Product({
   return (
     <DefaultPageLayout>
       <Container>
-        <BackBtn navigate="/" />
+        <BackButton navigate="/" />
         <section>
           <img src={data?.image_url} />
           <div>

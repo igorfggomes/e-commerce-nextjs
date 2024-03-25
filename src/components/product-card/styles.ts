@@ -37,14 +37,7 @@ export const Card = styled.div`
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding: 8px 0;
-
-    > div {
-      width: 224px;
-      height: 1px;
-      background: var(--shapes);
-      margin: 8px 0;
-      padding: 0px;
-    }
+    padding: 8px 12px;
+    width: 100%;
   }
 `;

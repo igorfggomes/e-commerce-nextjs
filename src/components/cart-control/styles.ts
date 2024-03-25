@@ -6,13 +6,14 @@ export const CartCount = styled.span`
   border-radius: 100%;
   padding: 0 5px;
   font-size: 10px;
-
   background-color: var(--delete-color);
-  color: white;
-
+  color: var(--white-color);
   margin-left: -10px;
 `;
 
-export const Container = styled.div`
+export const Container = styled.button`
   position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
 `;
