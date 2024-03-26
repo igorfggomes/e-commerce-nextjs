@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-commerce-nextjs
+#### Project: Torcedores.com
+Developed by [Igor Franklin Gonçalves Gomes](https://github.com/igorfggomes)
 
-## Getting Started
+![image](https://github.com/igorfggomes/e-commerce-nextjs/assets/54295991/ad988d95-8757-4ff2-a3bd-5a763e1852ef)
 
-First, run the development server:
+## 💻 Front-end:
+
+![react](https://badges.aleen42.com/src/react.svg)
+![typescript](https://badges.aleen42.com/src/typescript.svg)
+
+Torcedores.com is an e-commerce platform developed in React with NextJS, utilizing Typescript and Styled-Components for styling. It also uses Axios to consume the GraphQL API, adopts Conventional Commits to maintain consistency in commit patterns, and includes Eslint and Prettier to ensure code standardization. This project allows users to explore the e-commerce site in search of their favorite team's shirts or mugs, adding items to their cart and utilizing filters and pagination for a more comprehensive experience.
+
+## 📌 Requirements:
+
+Before you start, make sure you have met the following requirements:
+* Have [Visual Studio Code](https://code.visualstudio.com/) or a similar code editor installed.
+* Have [Git](https://git-scm.com) installed.
+* Have [Node 20.11.1](https://nodejs.org/en/download/) or higher installed.
+* Have [Yarn](https://yarnpkg.com/) or [NPM](https://nodejs.org/en/download/) installed.
+* Remember to clone the repository `git clone https://github.com/igorfggomes/e-commerce-nextjs.git` to be able to install and use it.
+
+## 🚀 Installation/Execution Front End:
+To install the necessary dependencies and run the project in the browser (http://localhost:3000/), simply execute:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+$ git clone https://github.com/igorfggomes/e-commerce-nextjs.git
+
+# Install dependencies
+$ yarn or npm install
+
+# Run the project
+$ yarn dev or npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 Installation/Execution GraphQL API:
+To install the necessary dependencies and run GraphQL API (http://localhost:3333/), simply execute:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Clone the repository
+$ git clone https://github.com/igorfggomes/e-commerce-nextjs.git
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Move to api file
+$ cd api
 
-## Learn More
+# Install dependencies
+$ yarn or npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run the project
+$ yarn start or npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📚 Additional Documentation:
+- [NextJS](https://nextjs.org/docs)
+- [React](https://reactjs.org/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [React-Query](https://tanstack.com/query/latest/docs/framework/react/overview)
+- [Styled-Components](https://styled-components.com/docs)
+- [ESLint](https://eslint.org/docs/latest/)
+- [Prettier](https://prettier.io/docs/en/)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
