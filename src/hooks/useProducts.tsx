@@ -14,15 +14,21 @@ const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> => {
 };
 
 export function useProducts() {
-  const { type, priority, search } = useFilter();
+  const { type, priority, search, page, setPage, perPage } = useFilter();
   const searchDeffered = useDeferredValue(search);
-  const query = mountQuery(type, priority);
+  const query = mountQuery(type, priority, page, perPage);
   const { data } = useQuery({
     queryFn: () => fetcher(query),
-    queryKey: ['products', type, priority],
+    queryKey: ['products', type, priority, page],
     staleTime: 1000 * 60 * 1
   });
+
+  const totalItems = data?.data?.data?._allProductsMeta?.count;
+
+  const totalPages = totalItems ? Math.ceil(totalItems / perPage) : 0;
+
   const products = data?.data?.data?.allProducts;
+  
   const filteredProducts = products?.filter((product) =>
     product.name
       .toLocaleLowerCase()
@@ -30,6 +36,10 @@ export function useProducts() {
   );
 
   return {
-    data: filteredProducts
+    data: filteredProducts,
+    page,
+    setPage,
+    perPage,
+    totalPages
   };
 }

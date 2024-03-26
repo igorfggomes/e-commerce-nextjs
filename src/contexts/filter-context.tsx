@@ -8,10 +8,11 @@ export const FilterContext = createContext({
   page: 0,
   type: FilterTypes.ALL,
   priority: PriorityTypes.NEWS,
+  perPage: 0,
   setPriority: (value: PriorityTypes) => {},
   setSearch: (value: string) => {},
   setPage: (value: number) => {},
-  setType: (value: FilterTypes) => {}
+  setType: (value: FilterTypes) => {},
 });
 
 interface ProviderProps {
@@ -23,6 +24,7 @@ export function FilterContextProvider({ children }: ProviderProps) {
   const [page, setPage] = useState(0);
   const [type, setType] = useState(FilterTypes.ALL);
   const [priority, setPriority] = useState(PriorityTypes.POPULARITY);
+  const [perPage] = useState(10);
 
   return (
     <FilterContext.Provider
@@ -31,10 +33,11 @@ export function FilterContextProvider({ children }: ProviderProps) {
         page,
         type,
         priority,
+        perPage,
         setSearch,
         setPage,
         setType,
-        setPriority
+        setPriority,
       }}
     >
       {children}
