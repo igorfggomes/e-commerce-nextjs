@@ -49,7 +49,7 @@ export default function Product({
           <img src={data?.image_url} />
           <div>
             <ProductInfo>
-              <span>{data?.category}</span>
+              <span>{data?.category === 'mugs' ? 'CANECAS' : 'CAMISETAS'}</span>
               <h2>{data?.name}</h2>
               <span>{formatPrice(data?.price_in_cents ?? 0)}</span>
               <p>
